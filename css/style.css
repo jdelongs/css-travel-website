@@ -1,0 +1,155 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+/*reset*/
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/*project wide defualt styles*/ 
+body {
+    font-family: "Lato", sans-serif; 
+    font-weight: 400; 
+    font-size: 16px; 
+    line-height: 1.7; 
+    color: #777; 
+    padding: 30px; 
+}
+
+/*header styles with background image */ 
+.header {
+    height: 95vh; /*always 95% of the viewport*/ 
+    background-image: linear-gradient(to right bottom, 
+                    #7ed56fcc,
+                    #28b485cc), 
+                    url("../img/hero.jpg"); 
+    background-size: cover; /*whatever the view port will always try to fit*/ 
+    background-position: top; 
+    position: relative; 
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); 
+
+}
+
+/*logo styles */ 
+.logo-box {
+    position: absolute; 
+    top: 40px; 
+    left: 40px; 
+}
+
+.logo {
+    height: 35px; 
+
+}
+
+.textbox {
+    position: absolute; 
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+}
+
+/*header text styles */ 
+.header-primary {
+    color: #fff; 
+    text-transform: uppercase;
+    backface-visibility: hidden; 
+    margin-bottom: 60px; 
+} 
+
+.header-primary-main {
+    display: block; 
+    font-size: 60px; 
+    font-weight: 400; 
+    letter-spacing: 35px;
+    
+    animation-name: move-in-left; 
+    animation-duration: 1s; 
+    animation-timing-function: ease-out; 
+     
+    /*
+         animation-delay: 1s; delays the animation by 1s
+         animation-interation-count: 3; how many times an animation happens
+         aimation-timing-function: how fast or slow certain moments aimation happens
+    */
+    
+} 
+
+.header-primary-sub {
+    display: block; 
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation: move-in-right 1s ease-out; 
+} 
+
+@keyframes move-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);  
+    }
+
+    80% {
+        transform:translateX(10px); 
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0); 
+    }
+}
+
+@keyframes move-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);  
+    }
+
+    80% {
+        transform:translateX(-10px); 
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0); 
+    }
+}
+
+/*states styles link is a special state for a link*/
+.btn:link, 
+.btn:visited {
+    text-transform: uppercase; 
+    text-decoration: none; 
+    padding: 15px 40px;
+    display: inline-block; 
+    border-radius: 100px; 
+    transition: all .2s; /*all properties will be animated */ 
+ 
+}
+
+/*styles for hover*/ 
+.btn:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,.2); 
+}
+
+/*styles for when clicked*/ 
+.btn:active {
+    transform: translateY(-1px); 
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+/*styles for specific button */ 
+.btn-white {
+    background-color: #fff; 
+    color: #777
+}
