@@ -1,0 +1,1 @@
+This is simple awesome looking one page site with some cool css animations that was made in a tutorial found here https://www.udemy.com/advanced-css-and-sass/learn/v4/overview
