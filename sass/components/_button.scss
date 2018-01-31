@@ -1,0 +1,70 @@
+.btn {
+
+    /*states styles link is a special state for a link*/
+        &:link, 
+        &:visited {
+            text-transform: uppercase; 
+            text-decoration: none; 
+            padding: 1.5rem 4rem;
+            display: inline-block; 
+            border-radius: 10rem; 
+            transition: all .2s; /*all properties will be animated */
+            position: relative;  
+            font-size: 1.5rem;
+        }
+    
+        /*styles for hover*/ 
+        &:hover {
+            transform: translateY(.3rem); 
+            box-shadow: 0 1rem 2rem rgba($color-black,.2); 
+    
+            &::after {
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0;  
+            }
+        }
+    
+        /*styles for when clicked*/ 
+        &:active {
+            transform: translateY(1rem); 
+            box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+        }
+    
+    
+        /*styles for specific button */ 
+        &--white {
+            background-color: #fff; 
+            color: $color-dark-grey;
+            
+            &::after {
+                background-color: $color-white; 
+            }      
+        }
+    
+        /*style for the button mouse over */  
+        &::after {
+            content: ""; 
+            display: inline-block;
+            height: 100%; 
+            width: 100%; 
+            border-radius: 100px; 
+            position: absolute;  
+            top: 0; 
+            left: 0;
+            z-index: -1;  
+            transition: all .4s; 
+            
+        }
+    
+    
+    
+    
+    
+        &--animated {
+            animation: move-in-bottom 1s ease-out .5s; 
+            animation-fill-mode: backwards; 
+        }
+          
+}
+    
+    

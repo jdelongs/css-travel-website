@@ -1,0 +1,44 @@
+/*project wide defualt styles*/ 
+body {
+    font-family: "Lato", sans-serif; 
+    font-weight: 400; 
+    /*font-size: 16px;*/ 
+    line-height: 1.7; 
+    color: $color-dark-grey; 
+    padding: 3rem;
+    box-sizing: border-box;  
+}
+
+.header-primary {
+    color:$color-white; 
+    text-transform: uppercase;
+    backface-visibility: hidden; //fixes shaky animation 
+    margin-bottom: 6rem; 
+
+    &--main {
+        display: block; 
+        font-size: 6rem; 
+        font-weight: 400; 
+        letter-spacing: 3.5rem;
+        
+        animation-name: move-in-left; 
+        animation-duration: 1s; 
+        animation-timing-function: ease-out; 
+         
+        /*
+             animation-delay: 1s; delays the animation by 1s
+             animation-interation-count: 3; how many times an animation happens
+             aimation-timing-function: how fast or slow certain moments aimation happens
+        */
+        
+    } 
+    
+    &--sub {
+        display: block; 
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation: move-in-right 1s ease-out; 
+    } 
+    
+} 
