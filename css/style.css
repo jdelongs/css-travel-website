@@ -47,7 +47,6 @@ body {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  /*fixes shaky animation*/
   margin-bottom: 6rem; }
   .header-primary--main {
     display: block;

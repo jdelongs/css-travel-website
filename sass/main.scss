@@ -68,7 +68,7 @@ body {
 .header-primary {
     color:$color-white; 
     text-transform: uppercase;
-    backface-visibility: hidden; /*fixes shaky animation*/ 
+    backface-visibility: hidden; //fixes shaky animation 
     margin-bottom: 6rem; 
 
     &--main {
