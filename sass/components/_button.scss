@@ -1,6 +1,6 @@
 .btn {
 
-    /*states styles link is a special state for a link*/
+        /*styles for the button and styles for once visited*/
         &:link, 
         &:visited {
             text-transform: uppercase; 
@@ -8,16 +8,17 @@
             padding: 1.5rem 4rem;
             display: inline-block; 
             border-radius: 10rem; 
-            transition: all .2s; /*all properties will be animated */
+            transition: all .2s; //all properties will be animated 
             position: relative;  
-            font-size: 1.5rem;
+            font-size: $defualt-font-size;
         }
     
-        /*styles for hover*/ 
+        //hover animation  
         &:hover {
             transform: translateY(.3rem); 
             box-shadow: 0 1rem 2rem rgba($color-black,.2); 
-    
+
+            
             &::after {
                 transform: scaleX(1.4) scaleY(1.6);
                 opacity: 0;  
@@ -55,16 +56,38 @@
             transition: all .4s; 
             
         }
-    
-    
-    
-    
-    
+
+        
         &--animated {
             animation: move-in-bottom 1s ease-out .5s; 
             animation-fill-mode: backwards; 
         }
           
 }
+
+//button styles for learn more button    
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: $defualt-font-size; 
+        color: $color-primary; 
+        display: inline-block; 
+        text-decoration: none; 
+        border-bottom: .1rem solid $color-primary; 
+        padding: .3rem; 
+        transition: all .2s; 
+    } 
     
+    &:hover {
+        background-color: $color-primary; 
+        color: $color-white; 
+        box-shadow: 0 1rem 2rem rgba($color-black, .15); 
+        transform: translateY(-.2rem); 
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15); 
+        transform: translateY(-.2rem); 
+    }
+}
     

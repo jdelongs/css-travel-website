@@ -1,4 +1,4 @@
-//animations for first part of page  
+//animation for something to fade in from the left 
 @keyframes move-in-left {
     0% {
         opacity: 0;
@@ -15,7 +15,7 @@
     }
 }
 
-
+//animation for something to fade in from the right
 @keyframes move-in-right {
     0% {
         opacity: 0;
@@ -32,7 +32,7 @@
     }
 }
 
-
+//animation for something to come in from the bottom
 @keyframes move-in-bottom {
     0% {
         opacity: 0;
