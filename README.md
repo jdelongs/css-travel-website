@@ -1,1 +1,1 @@
-This is simple, awesome looking, one page sass site with some cool css animations that was made from a tutorial found here https://www.udemy.com/advanced-css-and-sass/learn/v4/overview
+This is simple, responsive, awesome looking, one page sass site with some cool css animations that was made from a tutorial found here https://www.udemy.com/advanced-css-and-sass/learn/v4/overview
