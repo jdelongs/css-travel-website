@@ -1,6 +1,7 @@
 .btn {
 
         /*styles for the button and styles for once visited*/
+        &,
         &:link, 
         &:visited {
             text-transform: uppercase; 
@@ -11,6 +12,10 @@
             transition: all .2s; //all properties will be animated 
             position: relative;  
             font-size: $defualt-font-size;
+
+            //change for the button element 
+            border: none; 
+            cursor: pointer; 
         }
     
         //hover animation  
@@ -26,7 +31,9 @@
         }
     
         /*styles for when clicked*/ 
-        &:active {
+        &:active, 
+        &:focus {
+            outline: none; 
             transform: translateY(1rem); 
             box-shadow: 0 .5rem 1rem rgba($color-black,.2);
         }
